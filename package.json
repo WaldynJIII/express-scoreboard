@@ -1,0 +1,11 @@
+{
+  "name": "express-scoreboard",
+  "version": "1.0.0",
+  "description": "A sample project that displays players and an interactive scoreboard. Uses express and ajax to send data to the server-side scoreboard",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

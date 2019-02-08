@@ -51,10 +51,21 @@ function rebuildPlayerList(playerArray) {
     // clear old stuff from the list
     let playerList = $('#playerList');
     playerList.empty();
+    // refresh the dropdowns
+    let dropdowns = $('.playerDropdown');
+    dropdowns.empty();
 
+    // add new player info into the list at the top
     for (player of playerArray) {
         playerList.append( 
-            `<div class="player">${player.name}</div>`)
+            `<div class="player">${player.name}</div>`);
+
+        dropdowns.append(`
+        <option value="${player.name}">${player.name}</option>`);
     }
+
+
+
+
 }
 

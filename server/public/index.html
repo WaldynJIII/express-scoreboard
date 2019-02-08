@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +10,19 @@
     <script src="client.js"></script>
 
     <!-- These scripts are for bootstrap to work -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 
 
     <!-- Styles - Using bootstrap here to help with layout -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Express Scoreboard</title>
 </head>
+
 <body class="page">
     <div class="headline">
         <h1>Express Scoreboard</h1>
@@ -25,7 +30,7 @@
 
     <div id="players" class="sunken">
         <div id="playerCreator">
-            <input type="text" id="playerInput", placeholder="Player Name">
+            <input type="text" id="playerInput" , placeholder="Player Name">
             <button id="addPlayerButton">Add Player</button>
         </div>
         <div id="playerList">
@@ -34,26 +39,40 @@
             <div class="player">Kevin</div>
         </div>
     </div>
-    <div id="versus", class="sunken">
+    <div id="versus" , class="sunken">
         <h1>BATTLE</h1>
         <div class="container">
             <div class="row">
                 <div class="col-sm sunkenChunk">
                     <h3>Player 1</h3>
                     <select class="playerDropdown" id="player1"></select>
-                </div> 
+                </div>
 
-                <button class="col-sm">FIGHT!</button>
-                
+                <button class="col-sm" id="fightButton">FIGHT!</button>
+
                 <div class="col-sm sunkenChunk">
-                        <h3>Player 2</h3>
-                        <select class="playerDropdown" id="player1"></select>
-                    </div>
+                    <h3>Player 2</h3>
+                    <select class="playerDropdown" id="player2"></select>
+                </div>
             </div>
         </div>
     </div>
     <div id="scoreboard" class="sunken">
         <h1>Scores</h1>
+        <table>
+            <tr>
+                <th>Player 1</th>
+                <th>P1 Score</th>
+                <th>Player 2</th>
+                <th>P2 Score</th>
+                <th>Winner</th>
+            </tr>
+            <tbody id="scoreboardTable">
+              
+            </tbody>
+
+        </table>
     </div>
 </body>
+
 </html>

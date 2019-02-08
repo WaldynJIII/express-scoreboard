@@ -6,6 +6,8 @@ let players = [
     {name: 'Vader'}
 ];
 
+let battles = [];
+
 // ref our packages
 let express = require('express');
 let bodyParser = require('body-parser');
@@ -30,6 +32,13 @@ app.get('/players', (req, res) => {
     res.send(players);
 })
 
+// route to add new battle data from client
+app.post('/battle', (req, res) => {
+    battles.push(req.body);
+    console.log('we got data through /battle:', req.body);
+    res.sendStatus(200);
+})
+
 // route to add new player from client
 app.post('/new-player', (req, res) => {
 
@@ -43,3 +52,7 @@ app.post('/new-player', (req, res) => {
 
     res.sendStatus(201);
 })
+
+app.get('/battle', (req,res) => {
+    res.send(battles)
+});

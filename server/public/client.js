@@ -37,6 +37,9 @@ function addPlayer() {
 }
 
 function refreshPlayerDisplay() {
+    
+    console.log('refreshing player display');
+    
     // fetch the data from the server
     $.ajax( 
         { method: 'GET', url: '/players'}

@@ -40,4 +40,6 @@ app.post('/new-player', (req, res) => {
     // be the player object, so we can just push that
     // right into the array of players.
     players.push(req.body);
+
+    res.sendStatus(201);
 })

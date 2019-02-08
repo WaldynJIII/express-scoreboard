@@ -1,0 +1,25 @@
+html {
+    margin: 45px;
+    background-color: rgb(100, 149, 237);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+}
+
+.headline {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.sunken {
+    background-color: rgb(71, 96, 207);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.player {
+    margin: 6px auto;
+    padding: 2px 20px;
+    background-color: rgb(100, 149, 237);
+}
+

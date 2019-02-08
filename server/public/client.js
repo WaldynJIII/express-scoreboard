@@ -57,9 +57,12 @@ function rebuildPlayerList(playerArray) {
 
     // add new player info into the list at the top
     for (player of playerArray) {
+
+        // add players to playerlist
         playerList.append( 
             `<div class="player">${player.name}</div>`);
 
+        // add players to dropdowns
         dropdowns.append(`
         <option value="${player.name}">${player.name}</option>`);
     }

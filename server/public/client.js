@@ -1,16 +1,3 @@
-class Player {
-    constructor(name) {
-        this.name = name;
-    }
-}
-
-let players = [
-    new Player('Greg'),
-    new Player('Luke'),
-    new Player('Vader'),
-    new Player('Leia')
-];
-
 $(document).ready(onReady);
 
 // this is called when the document is fully loaded
@@ -34,8 +21,15 @@ function addPlayer() {
     }
 
     // create a new player using the input field, add it to the list of players
-    let newPlayer = new Player(playerInput.val());
-    players.push(newPlayer);
+    let newPlayer = {name: playerInput.val()};
+
+    $.ajax(
+        {
+            method: 'POST',
+            url: '/new-player',
+            data: newPlayer
+        }
+    ).then(refreshPlayerDisplay);
 
     // clear the input field
     playerInput.val('');
@@ -43,5 +37,7 @@ function addPlayer() {
 
 function refreshPlayerDisplay() {
     // TODO the things
+    console.log('refreshing player data, theoretically');
+    
 }
 

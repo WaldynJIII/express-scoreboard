@@ -6,8 +6,9 @@ let players = [
     {name: 'Vader'}
 ];
 
-// ref the express package
+// ref our packages
 let express = require('express');
+let bodyParser = require('body-parser');
 
 // Create an express app instance & ref it with 'app'
 let app = express();
@@ -20,6 +21,9 @@ app.listen(PORT, () => {
 // Use the stuff in server/public as the default route '/' (or something like that)
 app.use(express.static('server/public'));
 
+// This line performs black magic and is very important. don't delete or move it.
+app.use(bodyParser.urlencoded({extended: true}));
+
 // route to send player info to client
 app.get('/players', (req, res) => {
 
@@ -28,6 +32,9 @@ app.get('/players', (req, res) => {
 
 // route to add new player from client
 app.post('/new-player', (req, res) => {
+
+    console.log('server has recieved new player ' + req.body.name);
+    
 
     // the data being sent to this route SHOULD
     // be the player object, so we can just push that

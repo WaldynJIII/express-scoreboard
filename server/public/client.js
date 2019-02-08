@@ -6,6 +6,7 @@ function onReady() {
     // listen for 'add player' button clicks
     $('#addPlayerButton').on('click', addPlayer);
 
+    refreshPlayerDisplay();
 }
 
 // Uses the input field in the player creator div
@@ -36,8 +37,21 @@ function addPlayer() {
 }
 
 function refreshPlayerDisplay() {
-    // TODO the things
-    console.log('refreshing player data, theoretically');
-    
+    // fetch the data from the server
+    $.ajax( 
+        { method: 'GET', url: '/players'}
+    ).then(rebuildPlayerList);
+}
+
+function rebuildPlayerList(playerArray) {
+
+    // clear old stuff from the list
+    let playerList = $('#playerList');
+    playerList.empty();
+
+    for (player of playerArray) {
+        playerList.append( 
+            `<div class="player">${player.name}</div>`)
+    }
 }
 

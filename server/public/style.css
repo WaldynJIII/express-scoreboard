@@ -1,4 +1,4 @@
-html {
+.page {
     margin: 45px;
     background-color: rgb(100, 149, 237);
     color: white;
@@ -18,11 +18,24 @@ html {
     margin: 12px;
 }
 
+.sunkenChunk {
+    margin: 6px;
+    padding: 10px;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(.1, .1, .1);
+}
+
 .player {
     margin: 6px auto;
     padding: 2px 20px;
     background-color: rgb(100, 149, 237);
     text-align: center;
+}
+
+.playerDropdown {
+    width: 90%;
 }
 
 h1 {
